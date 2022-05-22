@@ -6,5 +6,5 @@
   <li>For styling I've used SASS.</li>
 </ul>  
 <div class="pics">
-  <img src="https://musatirgithub.github.io/IosCalculator/IosCalculator.jpg/" width="600px">
+  <img src="https://musatirgithub.github.io/IosCalculator/IosCalculator.jpg/" width="400px">
 </div>

@@ -23,6 +23,22 @@ main {
   background-color: black;
   border-radius: 20px;
 }
+main .screen {
+  color: white;
+  padding: 1rem 0 0 1rem;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  justify-content: end;
+  align-items: center;
+  text-align: right;
+}
+main .operation, main .result {
+  font-size: 1.75rem;
+  padding-right: 0.8rem;
+}
+main .ended {
+  font-size: 2.5rem;
+}
 main .keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -31,22 +47,32 @@ main .keys {
   padding: 0 10px 15px 10px;
 }
 main .orange {
-  background-color: rgb(245, 182, 65);
+  background-color: rgb(255, 122, 65);
   color: white;
+}
+main .orange:hover {
+  background-color: rgb(255, 165, 130);
 }
 main .grey {
   background-color: rgb(211, 208, 208);
   color: rgb(71, 71, 71);
 }
+main .grey:hover {
+  background-color: rgb(241, 236, 236);
+}
 main .darkgrey {
   background-color: rgb(71, 71, 71);
   color: white;
+}
+main .darkgrey:hover {
+  background-color: grey;
 }
 main .key {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
+  cursor: pointer;
 }
 main .zero {
   grid-column: 1/3;

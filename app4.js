@@ -140,7 +140,7 @@ function mathOps(button){
 
 function extensionReducer(calculation){
 if (calculation.toString().length > 9 && calculation.toString().includes('.')){
-    return calculation.toPrecision(9);
+    return calculation.toFixed(9-calculation.toString().indexOf('.'));
 } else {
     return calculation;
 }

@@ -37,7 +37,7 @@ main .operation, main .result {
   padding-right: 0.8rem;
 }
 main .ended {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 main .keys {
   display: grid;
@@ -73,6 +73,7 @@ main .key {
   align-items: center;
   border-radius: 30px;
   cursor: pointer;
+  user-select: none;
 }
 main .zero {
   grid-column: 1/3;

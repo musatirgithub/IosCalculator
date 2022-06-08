@@ -1,4 +1,4 @@
-# [Click here to reach Ios Calculator Project](https://musatirgithub.github.io/IosCalculator/)
+# [Click here to reach Ios Calculator Project](https://musatirgithub.github.io/IosCalculator/index.html)
 <h3>In this project;</h3>
 <ul>
   <li>I have created a calculator,</li>

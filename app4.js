@@ -106,22 +106,30 @@ function mathOps(button){
             break;
         case '÷':
             if (button.innerText == '='){
-                operation.innerText = extensionReducer(Number(result.innerText.slice(0, -1)) / Number(operation.innerText));
-                result.innerText = '';
-                ended = true;
-                operation.classList.add('ended');
-            } else {
+                if (operation.innerText == 0 || operation.innerText == "Error") {
+                    operation.innerText = 'Error';
+                } else {
+                    operation.innerText = extensionReducer(Number(result.innerText.slice(0, -1)) / Number(operation.innerText));
+                    result.innerText = '';
+                    ended = true;
+                    operation.classList.add('ended');
+                }
+            } else if (operation.innerText == 0 || operation.innerText == "Error") {
+                operation.innerText = 'Error';
+            }else {
                 result.innerText = extensionReducer(Number(result.innerText.slice(0, -1)) / Number(operation.innerText)) + button.innerText;
                 operation.innerText = '';
             }
             break;
         case 'x':
             if (button.innerText == '='){
-                operation.innerText = extensionReducer(Number(result.innerText.slice(0, -1)) * Number(operation.innerText));
-                result.innerText = '';
-                ended = true;
-                operation.classList.add('ended');
-            } else {
+                if (operation.innerText != "") {
+                    operation.innerText = extensionReducer(Number(result.innerText.slice(0, -1)) * Number(operation.innerText));
+                    result.innerText = '';
+                    ended = true;
+                    operation.classList.add('ended');
+                }
+            } else if (operation.innerText != ""){
                 result.innerText = extensionReducer(Number(result.innerText.slice(0, -1)) * Number(operation.innerText)) + button.innerText;
                 operation.innerText = '';
             }
@@ -131,7 +139,7 @@ function mathOps(button){
 }
 
 function extensionReducer(calculation){
-if (calculation.toString().length > 10 && calculation.toString().includes('.')){
+if (calculation.toString().length > 9 && calculation.toString().includes('.')){
     return calculation.toPrecision(9);
 } else {
     return calculation;

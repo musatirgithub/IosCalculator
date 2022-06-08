@@ -64,7 +64,7 @@ else if (others.includes(event.target.innerText)){
         operation.innerText = 0;
     }
     else if(event.target.innerText == '±'){
-        operation.innerText = operation.innerText * (-1);
+        operation.innerText != '' && (operation.innerText = operation.innerText * (-1));
     }
     else if(event.target.innerText == '%'){
         if (operation.innerText.length < 5){
